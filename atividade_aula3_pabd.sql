@@ -5,7 +5,7 @@ full outer join takes t ON s.ID = t.ID;
 
 
 -- Questão 2. Contar a quantidade de cursos realizados pelos alunos do departamento de Civil Eng. 
-Ordenar de maneira descendente a quantidade de cursos associada aos alunos.
+--Ordenar de maneira descendente a quantidade de cursos associada aos alunos.
 
 
 SELECT s.id, s.name, count(distinct t.course_id) as quantidadecursos from student s 
