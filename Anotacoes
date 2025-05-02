@@ -3,17 +3,20 @@
 select * from student join takes on student.id = takes.id;
 
 --slide 16
+-- Encontrar todos os alunos que nao realizaram um curso, course_id is null
 SELECT * FROM student LEFT OUTER JOIN takes ON student.ID = takes.ID WHERE takes.course_id IS NULL;
 
 --slide 17
---mesma coisa do de cima, apenas o inverso
+--Mesma coisa do de cima, apenas o inverso
 SELECT * FROM takes RIGHT OUTER JOIN student ON student.ID = takes.ID WHERE takes.course_id IS NULL;.
 
 --slide 19
+
 SELECT * FROM
-(SELECT * FROM student s WHERE s.dept_name = 'Comp. Sci.') st
+(SELECT * FROM student s WHERE s.dept_name = 'Comp. Sci.') as st
 FULL OUTER JOIN
-(SELECT * FROM takes t WHERE t.semester = 'Spring' and t.[year] = 2009) ta ON st.ID = ta.ID;
+(SELECT * FROM takes t WHERE t.semester = 'Spring' and t.[year] = 2009) as ta 
+ON st.ID = ta.ID;
 
 /*Views*/
 
