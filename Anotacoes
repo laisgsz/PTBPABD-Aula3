@@ -25,6 +25,7 @@ SELECT ID, name, dept_name FROM instructor;
 /* mostra o nome dos instrutores a partir de um departamento */
 CREATE VIEW faculty AS SELECT ID, name, dept_name FROM instructor;
 
+-- Encontrar todos os instrutores do dpt de biologia
 SELECT name FROM faculty WHERE dept_name = 'Biology';
 
 /*pega a soma total dos salários por departamento*/
